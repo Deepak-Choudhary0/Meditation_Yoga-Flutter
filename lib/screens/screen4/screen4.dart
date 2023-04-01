@@ -9,7 +9,7 @@ class Screen4 extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-     // bottomNavigationBar: BottomNavBar(),
+      // bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
@@ -36,7 +36,7 @@ class Screen4 extends StatelessWidget {
                       "Meditation",
                       style: Theme.of(context)
                           .textTheme
-                          .display1
+                          .headlineMedium
                           .copyWith(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
@@ -91,7 +91,7 @@ class Screen4 extends StatelessWidget {
                       "Meditation",
                       style: Theme.of(context)
                           .textTheme
-                          .title
+                          .titleLarge
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
                     Container(
@@ -123,7 +123,7 @@ class Screen4 extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "Basic 2",
-                                  style: Theme.of(context).textTheme.subtitle,
+                                  style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 Text("Start your deepen you practice")
                               ],
@@ -203,7 +203,7 @@ class SeassionCard extends StatelessWidget {
                     SizedBox(width: 10),
                     Text(
                       "Session $seassionNum",
-                      style: Theme.of(context).textTheme.subtitle,
+                      style: Theme.of(context).textTheme.titleSmall,
                     )
                   ],
                 ),

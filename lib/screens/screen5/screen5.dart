@@ -4,15 +4,13 @@ import 'package:meditation_yoga/screens/screen4/screen4.dart';
 import 'package:meditation_yoga/screens/screen4/widget/search_bar.dart';
 import 'package:meditation_yoga/screens/screen5/category_cart.dart';
 
-class Screen5 extends StatelessWidget
-{
+class Screen5 extends StatelessWidget {
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
         .size; //this gonna give us total height and with of our device
     return Scaffold(
-     // bottomNavigationBar: BottomNavBar(),
+      // bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
@@ -49,7 +47,7 @@ class Screen5 extends StatelessWidget
                     "Good Morning \nAtharva",
                     style: Theme.of(context)
                         .textTheme
-                        .display1
+                        .displaySmall
                         .copyWith(fontWeight: FontWeight.w900),
                   ),
                   SearchBar(),
@@ -73,12 +71,10 @@ class Screen5 extends StatelessWidget
                         CategoryCard(
                           title: "Meditation",
                           svgSrc: "images/Meditation.svg",
-                          press: ()
-                          {
+                          press: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context)
-                              {
+                              MaterialPageRoute(builder: (context) {
                                 return Screen4();
                               }),
                             );

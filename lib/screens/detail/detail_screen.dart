@@ -3,11 +3,9 @@ import 'package:meditation_yoga/colorsfile.dart';
 import 'package:meditation_yoga/screens/home/widget/book_rating.dart';
 import 'package:meditation_yoga/screens/home/widget/rounded_button.dart';
 
-class DetailsScreen extends StatelessWidget
-{
+class DetailsScreen extends StatelessWidget {
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
@@ -42,7 +40,8 @@ class DetailsScreen extends StatelessWidget
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.only(top: size.height * .4 + 20),
+                  padding:
+                      EdgeInsetsDirectional.only(top: size.height * .4 + 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -85,7 +84,7 @@ class DetailsScreen extends StatelessWidget
                 children: [
                   RichText(
                     text: TextSpan(
-                      style: Theme.of(context).textTheme.display1,
+                      style: Theme.of(context).textTheme.displaySmall,
                       children: [
                         TextSpan(text: "You might also "),
                         TextSpan(
@@ -127,8 +126,7 @@ class DetailsScreen extends StatelessWidget
                                   ),
                                   children: [
                                     TextSpan(
-                                      text:
-                                          "Supported Headstand\n",
+                                      text: "Supported Headstand\n",
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
@@ -182,15 +180,13 @@ class DetailsScreen extends StatelessWidget
   }
 }
 
-class ChapterCard extends StatelessWidget
-{
+class ChapterCard extends StatelessWidget {
   final String name;
   final String tag;
   final int chapterNumber;
   final Function press;
 
-  const ChapterCard(
-  {
+  const ChapterCard({
     Key key,
     this.name,
     this.tag,
@@ -202,8 +198,7 @@ class ChapterCard extends StatelessWidget
   final Size size;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 25),
@@ -254,16 +249,13 @@ class ChapterCard extends StatelessWidget
   }
 }
 
-class BookInfo extends StatelessWidget
-{
-  const BookInfo(
-  {
+class BookInfo extends StatelessWidget {
+  const BookInfo({
     Key key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Row(
       children: [
         Expanded(
@@ -272,11 +264,14 @@ class BookInfo extends StatelessWidget
             children: [
               Text(
                 "Cleaning",
-                style: Theme.of(context).textTheme.display1,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               Text(
                 "Breathing",
-                style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.bold),
+                style: Theme.of(context)
+                    .textTheme
+                    .displaySmall
+                    .copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 5,
